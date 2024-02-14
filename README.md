@@ -186,7 +186,7 @@ Playbooks are the heart of Ansible's configuration, deployment, and orchestratio
 Each playbook example provides a practical application of Ansible in a network engineering context, helping you to automate routine but critical tasks.
 
 
-## Step 5: Configuring Network Devices
+## Configuring Network Devices
 
 This section is dedicated to the practical aspects of configuring network devices using Ansible. Here, we focus on common network configuration tasks that can be automated.
 
