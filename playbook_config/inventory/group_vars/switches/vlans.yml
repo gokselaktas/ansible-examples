@@ -1,0 +1,25 @@
+---
+vlans: 
+   - vlan_name: VLAN5
+     vlan_id: 5
+
+   - vlan_name: VLAN13
+     vlan_id: 13
+
+   - vlan_name: VLAN56
+     vlan_id: 56
+
+   - vlan_name: VLAN102
+     vlan_id: 102
+
+   - vlan_name: VLAN53
+     vlan_id: 53
+
+   - vlan_name: VLAN14
+     vlan_id: 14
+
+   - vlan_name: VLAN46
+     vlan_id: 46
+
+   - vlan_name: VLAN12
+     vlan_id: 12

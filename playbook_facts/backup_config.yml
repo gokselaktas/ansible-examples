@@ -1,0 +1,9 @@
+---
+- name: Get cisco backup config 
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Backup config
+      ios_config:
+          backup: yes

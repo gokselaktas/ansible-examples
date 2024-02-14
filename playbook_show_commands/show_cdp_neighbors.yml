@@ -1,0 +1,29 @@
+---
+- name: Get device cdp neighbors
+  hosts:
+    - all
+  gather_facts: no
+  connection: local
+
+  vars_prompt:
+    - name: username
+      prompt: Username
+      private: no
+
+    - name: password
+      prompt: Password
+      private: yes
+
+  tasks:
+    - name: Get neighbors
+      ios_command:
+        commands:
+          - show cdp neighbors
+        provider:
+          username: "{{ username }}"
+          password: "{{ password }}"
+      register: neighbors
+
+    - name: display neighbors
+      debug:
+        var: neighbors.stdout_lines

@@ -1,0 +1,17 @@
+---
+- name: Instantiate Base config file
+  hosts: all
+  gather_facts: no
+
+
+  tasks:
+   
+    - name: Instantiate config
+      template:
+        src: ./template/device_config.j2
+        dest: ./build/{{ inventory_hostname }}.cfg
+
+    - name: Push instantiated config
+      ios_config:
+          src: ./build/{{ inventory_hostname }}.cfg
+          diff_against: startup

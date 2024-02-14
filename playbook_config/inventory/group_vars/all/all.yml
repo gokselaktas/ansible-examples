@@ -1,0 +1,20 @@
+---
+ansible_connection: network_cli
+ansible_network_os: ios
+ansible_user: ansible
+ansible_ssh_pass: ansible
+ansible_become: yes
+ansible_become_method: enable
+ansible_become_pass: ansible
+
+ospf_network: 192.168.1.0 255.255.255.0
+ospf_area: 0
+
+ntp_servers:
+    - 192.168.2.1
+    - 192.168.2.2
+    - 192.168.2.3
+dns_servers:
+    - 192.168.3.1
+    - 192.168.3.2
+...

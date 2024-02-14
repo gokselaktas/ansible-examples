@@ -1,0 +1,30 @@
+---
+- name: Output ARP table
+  hosts:
+    - all
+  connection: local
+  gather_facts: no
+  
+  vars_prompt:
+    - name: username
+      prompt: Username
+      private: no
+
+    - name: password
+      prompt: Password
+      private: yes
+
+  tasks:
+    - name: Execute arp command
+      ios_command:
+        commands:
+          - show arp
+        provider:
+          username: "{{ username }}"
+          password: "{{ password }}"
+      register: arp
+
+    - name: copy arp-table to file
+      copy:
+        content: "{{ arp.stdout_lines }}"
+        dest: "{{ inventory_hostname }}-arp-table.txt"

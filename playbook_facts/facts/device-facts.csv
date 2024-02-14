@@ -1,0 +1,5 @@
+"Inventory Hostname","Device hostname","Model","IOS version","Serial number","Total memory left:","Image location:"
+"S1","S1","IOSv","15.2(4.0.55)E","9XHCHR33IHQ","362684","flash0:/vios_l2-adventerprisek9-m"
+"S2","S2","IOSv","15.2(4.0.55)E","9HPUU2G2K6A","362774","flash0:/vios_l2-adventerprisek9-m"
+"R1","R1","IOSv","15.6(2)T","9T6YMTNZIBB2VCNWZTZFU","246979","flash0:/vios-adventerprisek9-m"
+"R2","R2","IOSv","15.6(2)T","9OY1F88W1R12WOCNCXP78","246975","flash0:/vios-adventerprisek9-m"

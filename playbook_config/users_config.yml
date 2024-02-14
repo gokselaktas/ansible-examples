@@ -1,0 +1,13 @@
+---
+- name: Create users on cisco devices
+  hosts: all
+  gather_facts: no
+
+
+  tasks: 
+    - name: Create Users and encrypt the passwords
+      ios_config:
+        lines:
+          - username "{{ item.username }}" password "{{ item.password }}"
+          - service password-encryption
+      loop: "{{ users }}"

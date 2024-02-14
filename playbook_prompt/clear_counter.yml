@@ -1,0 +1,13 @@
+---
+- name: Clear interface counters
+  hosts:
+    - all
+  gather_facts: no
+
+  tasks:
+    - name: Clear interface counters
+      ios_command:
+        commands:
+        - command: 'clear counters'
+          prompt: 'Clear "show interface" counters on all interfaces'
+          answer: 'y'

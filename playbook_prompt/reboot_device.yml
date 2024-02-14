@@ -1,0 +1,13 @@
+---
+- name: Reboot device
+  hosts:
+    - all
+  gather_facts: no
+
+  tasks:
+    - name: Reboot device
+      ios_command:
+        commands:
+        - command: 'reload'
+          prompt: 'Proceed with reload?'
+          answer: 'y'

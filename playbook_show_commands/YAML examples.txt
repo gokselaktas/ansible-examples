@@ -1,0 +1,15 @@
+---
+var_1:
+  somenum: 236
+  othervar: 22
+  list_values:
+    - list_string
+    - 12
+    - 236
+var_2:
+  somenum: 23
+  othervar: 25
+  list_values:
+    - list_string_1
+    - 25
+    - 123

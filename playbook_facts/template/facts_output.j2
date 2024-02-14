@@ -1,0 +1,4 @@
+"Inventory Hostname","Device hostname","Model","IOS version","Serial number","Total memory left:","Image location:"
+{% for hosts in groups['all'] %}
+"{{ hostvars[hosts].inventory_hostname }}","{{ hostvars[hosts].ansible_net_hostname }}","{{ hostvars[hosts].ansible_net_model }}","{{ hostvars[hosts].ansible_net_version }}","{{ hostvars[hosts].ansible_net_serialnum }}","{{ hostvars[hosts].ansible_net_memfree_mb}}","{{ hostvars[hosts].ansible_net_image }}"
+{% endfor %}

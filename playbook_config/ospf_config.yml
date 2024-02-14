@@ -1,0 +1,28 @@
+---
+ - name: Configure OSPF
+   hosts: routers
+   gather_facts: no
+
+
+   tasks:
+    - name: Configure loopback
+      ios_config:
+        lines: 
+          - ip address {{ loopback }} 255.255.255.255
+        parents: interface loopback 1
+
+    - name: Configure OSPF
+      ios_config:
+        lines:
+          - router-id {{ router_id }}
+          - network {{ ospf_network  }} area {{ ospf_area }}
+        parents: router ospf 1
+
+    - name: Execute show ospf neighbors command
+      ios_command:
+        commands: show ip ospf neighbor
+      register: ospf
+
+    - name: Display neighbors
+      debug:
+        var: ospf.stdout_lines

@@ -1,0 +1,10 @@
+---
+- name: Display vars
+  hosts: all
+  gather_facts: no
+
+  tasks:
+
+    - name: Show vars
+      debug:
+        var: hostvars
