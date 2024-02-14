@@ -6,6 +6,8 @@
 
 This repository contains the resources and code for setting up and using Ansible to automate network engineering tasks.
 
+![image](simulation.png)
+
 ## Software Requirements
 
 Before you begin, ensure you have the following software installed:
