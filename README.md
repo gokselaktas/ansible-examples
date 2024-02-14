@@ -213,6 +213,8 @@ This section is dedicated to the practical aspects of configuring network device
           state: present
 ```
 
+![image](banner.png)
+
 
 - **Creating VLANs and users**: VLANs are used to segment networks into different broadcast domains, and user accounts are necessary for access control. The Ansible playbook  is designed to create user accounts on Cisco devices.
 ```
