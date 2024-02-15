@@ -68,7 +68,7 @@ Ad-Hoc commands are a quick and powerful way to run tasks against your inventory
 
 Playbooks are the heart of Ansible's configuration, deployment, and orchestration. In this section, we will focus on playbooks that execute 'show' commands on network devices.
 
-- **Show cdp neighbors**: Learn how to create a playbook that retrieves CDP (Cisco Discovery Protocol) neighbor details. This is useful for network discovery and documentation.
+- **Show cdp neighbors**: This Ansible playbook is designed to retrieve the Cisco Discovery Protocol (CDP) neighbor information from all network devices in the inventory. The playbook prompts the user to enter a username and password, which it then uses to authenticate against the Cisco devices.
 ```
 ---
 - name: Get device cdp neighbors
@@ -184,8 +184,6 @@ Playbooks are the heart of Ansible's configuration, deployment, and orchestratio
           backup: yes
 ```
 
-
-Each playbook example provides a practical application of Ansible in a network engineering context, helping you to automate routine but critical tasks.
 
 
 ## Configuring Network Devices
