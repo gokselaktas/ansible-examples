@@ -59,14 +59,41 @@ sudo ansible all -m ping
 
 ## Ad-Hoc Commands for Ansible
 
+
 Ad-Hoc commands are a quick and powerful way to run tasks against your inventory.
 
 - **IOS Modules for Cisco**: Learn which modules are available for managing Cisco IOS devices. It's important to familiarize yourself with these to make full use of Ansible's capabilities for network automation.
+`https://docs.ansible.com/ansible`
 
 - **Using localhost Setup Module**: Understand how to gather facts about your control machine using the localhost setup module. This can be a useful debugging tool.
+  ```Bash
+  sudo ansible localhost -m setup
+  ```
+  It will go to your local machine and provide you with a huge collection of information. Anywhere from Python version to user, memory, how much free memory description will give a lot of information this command, displayed in JSON format. JSON format is a Javascript serialization language, just like YAML.
 
 - **Limit Ad-Hoc Command**: Discover how to restrict Ad-Hoc command execution to specific hosts in your inventory, allowing for more granular control of your network devices.
-
+  ```
+  sudo ansible all -m ping --limit=S1
+  ```
+  ```
+  S1 | SUCCESS => {
+       "changed": false,
+       "ping": "pong"
+  }
+  ```
+  ```
+  sudo ansible all -m ping --limit=S1,S2
+  ```
+  ```
+  S1 | SUCCESS => {
+       "changed": false,
+       "ping": "pong"
+  }
+  S2 | SUCCESS => {
+       "changed": false,
+       "ping": "pong"
+  }
+  ```
 - **-u -k Ad-Hoc Command**: This command allows you to specify the user and ask for the SSH password when running Ad-Hoc commands. It's a useful option when your authentication is not set up through SSH keys.
 
 ## Running "Show" Command Playbooks
