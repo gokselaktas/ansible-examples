@@ -6,7 +6,12 @@
 
 This repository contains the resources and code for setting up and using Ansible to automate network engineering tasks.
 
-![image](simulation.png)
+
+<div align="center" style="text-align: center" >
+<img src="https://github.com/gokselaktas/ansible-examples/assets/33264492/645a9ad3-3747-4c73-9437-1abf24556204">
+</div>
+<br>
+
 
 ## Software Requirements
 
@@ -211,8 +216,10 @@ This section is dedicated to the practical aspects of configuring network device
           state: present
 ```
 
-![image](banner.png)
-
+<div align="center" style="text-align: center" >
+<img src="https://github.com/gokselaktas/ansible-examples/assets/33264492/cfc8f96f-d8a4-4702-9faa-1dc45f2a38f1">
+</div>
+<be>
 
 - **Creating VLANs and users**: VLANs are used to segment networks into different broadcast domains, and user accounts are necessary for access control. The Ansible playbook  is designed to create user accounts on Cisco devices.
 ```
