@@ -95,6 +95,28 @@ Ad-Hoc commands are a quick and powerful way to run tasks against your inventory
   }
   ```
 - **-u -k Ad-Hoc Command**: This command allows you to specify the user and ask for the SSH password when running Ad-Hoc commands. It's a useful option when your authentication is not set up through SSH keys.
+  ```
+  sudo ansible all -m ping -u ansible -k
+  ```
+  ```
+  S2 | SUCCESS => {
+       "changed": false,
+       "ping": "pong"
+  }
+  R2 | SUCCESS => {
+       "changed": false,
+       "ping": "pong"
+  }
+  R1 | SUCCESS => {
+       "changed": false,
+       "ping": "pong"
+  }
+  S1 | SUCCESS => {
+       "changed": false,
+       "ping": "pong"
+  }
+
+  ```
 
 ## Running "Show" Command Playbooks
 
